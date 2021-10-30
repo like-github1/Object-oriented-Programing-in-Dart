@@ -19,6 +19,11 @@ void main() {
 
   Function lamdafunction2 = (int a, int b) =>
       (a * b); //Function Expression that actually returns a value;
+  Function mylamda = (num1, num2) => print(num1 + num2);
+
+  higherOrderFunction('this is Higher order Function', mylamda);
+  Function myfunctions = higherOrder();
+  print(myfunctions(20, 3));
 }
 
 //Normal Function That Prints the sum of a and b;
@@ -32,3 +37,18 @@ int Normalfunction(int a, int b) {
   return a * b;
 }
 
+//Higher Order Function
+//function that accept other Function as a Parameter
+//Can also Return function;
+void higherOrderFunction(String message, Function myfunction) {
+  print(message);
+  myfunction("this", "IS higher order");
+}
+
+//the second Higher Oreder Function is a function That Returns other function
+
+Function higherOrder() {
+  // ignore: prefer_function_declarations_over_variables
+  Function lamda = (int s, int y) => s * y;
+  return lamda;
+}

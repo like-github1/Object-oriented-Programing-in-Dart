@@ -31,3 +31,4 @@ class Dog extends animal {
     print("this is named Constructor");
   }
 }
+//Closure in Dart
