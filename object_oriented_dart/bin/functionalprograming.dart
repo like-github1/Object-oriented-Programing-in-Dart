@@ -1,27 +1,33 @@
-//Lamda in dart
-//lameda function is nameless function
-//function, and variables are object
 void main() {
-  //Lamda Funciton is declared without name.
-  //since Lameda function is an Object. we can assign it to a variables
+  //Lamda Functionn
+
+  //two ways of Expressing Lamda Function
+  //Expressing Lamda function as Function Expression
+  //Now let us Express the below Two Function as a Lamda Function
+  //Since Function is an object we assign lamda function to a variables
   Function lamdafunction = (int a, int b) {
     int sum = a * b;
     print(sum);
   };
-  Function lamdaone = (int a, int b) {
+//LamdaFunction That Returns a value
+  Function lamdafunctionTwo = (int a, int b) {
     return a * b;
   };
-  lamdafunction(2, 3);
-  print(lamdatwo(13, 6));
+  //now let us express the lamdaFunction as a Function Expression
+
+  Function lamdafunction1 = (int a, int b) => print(a * b);
+
+  Function lamdafunction2 = (int a, int b) =>
+      (a * b); //Function Expression that actually returns a value;
 }
-//the second ways of representing lamda function
-//function which have name.it is a normal function
- Function lamdatwo = (int a, int b) => a * b;
 
-
-void addtwoNumber(int a, int b) {
+//Normal Function That Prints the sum of a and b;
+void normalFunction(int a, int b) {
   int sum = a * b;
   print(sum);
 }
-//two ways of expressing lamda functions
 
+//Noraml Function that Returns the sum of a and b;
+int Normalfunction(int a, int b) {
+  return a * b;
+}
