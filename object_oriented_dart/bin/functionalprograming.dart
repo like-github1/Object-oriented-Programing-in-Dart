@@ -31,3 +31,4 @@ void normalFunction(int a, int b) {
 int Normalfunction(int a, int b) {
   return a * b;
 }
+
