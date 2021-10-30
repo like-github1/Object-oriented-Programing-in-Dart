@@ -1,25 +1,33 @@
-void main(List<String> arguments) {
-  var obj = new dog();
-  obj.eat();
-  print(obj.type);
+//Inheritance
+
+void main() {
+  var obj2 = Dog.mynamedConstructor();
 }
 
+//animal class with default Constructor
 class animal {
-  late String type;
-  void eat() {
-    print("animal Eats food");
+  String type = "domestic";
+  //Default Constructor
+  animal(String animalType) {
+    this.type = animalType;
+    print("supper parameter constructor $type");
+  }
+  animal.supperanimalConstructor(String type) {
+    this.type = type;
+    print("this is named supper constructor");
   }
 }
 
-class dog extends animal {
-  late String color;
-  late String type = "new dog";
-  void bark() {
-    print("dog barks");
+//Dog Class with Default Constructor
+class Dog extends animal {
+  String Color = "black dog";
+  //parameterize Constructor
+  Dog(String dogColor, String type) : super(type) {
+    this.Color = dogColor;
+    print("the colors of  dor id $Color");
   }
-
-  void eat() {
-    super.eat(); //the eat method of the supper class in excuted first
-    print("dog is eating");
+  //NamedConstrucor
+  Dog.mynamedConstructor() : super.supperanimalConstructor("rular and domestic") {
+    print("this is named Constructor");
   }
 }
