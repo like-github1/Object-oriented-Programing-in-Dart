@@ -1,25 +1,8 @@
-void main() {
-  String message = "Dart is Good";
-
-  showMessage() {
-    //this Function is Known as Clouser Function
-    //Closure function is a function that has access to the Parent Scope, and modifed the
-    //Global variables. even after the scope has closed.
-    message = "Dart is Awesome";
-    print(message);
-  }
-
-  showMessage();
-
-  talk() {
-    message = "this is localmessage";
-   Sayt() {
-      message = "say function";
-      print(message);
-    };
-
-    return Sayt();
-  }
-
-var  result = talk();
-}
+//in these Tutorials we Learn
+//Lamada Function
+//Nameless Function
+//Anonimus FUNCTION
+//hIGHER ORDER fUNCTION 
+//HIGHER orderfunction is a function that accepts function as aparameter
+//and function that returns a function as well.
+//Clousers.
