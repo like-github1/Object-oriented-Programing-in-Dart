@@ -1,10 +1,20 @@
 //Inheritance
 
 void main() {
-  var obj2 = Dog.mynamedConstructor();
+
+
+
+  String names = "Dart is Good";
+  Function myLamda = () {
+    names = "Dart is awesome";//using Closure i changed the local variables value.
+    print(names);
+  };
+  myLamda();
 }
 
 //animal class with default Constructor
+//Lamda function
+
 class animal {
   String type = "domestic";
   //Default Constructor
@@ -27,8 +37,10 @@ class Dog extends animal {
     print("the colors of  dor id $Color");
   }
   //NamedConstrucor
-  Dog.mynamedConstructor() : super.supperanimalConstructor("rular and domestic") {
+  Dog.mynamedConstructor()
+      : super.supperanimalConstructor("rular and domestic") {
     print("this is named Constructor");
   }
 }
 //Closure in Dart
+//in clouser you can modify the value of the variables in the global scope
